@@ -1,0 +1,511 @@
+/**
+ * METODOLOGIA CSS
+ * BEM - https://en.bem.info/ ou http://getbem.com/
+ * -- Bloco / Elemento / Modificador
+ *
+ *
+ * DESENVOLVIMENTO
+ *
+ * SETTINGS
+ * Reset................CSS Reset.
+ * Global...............Estilos globais. 
+ * Funcionais...........Classes de estilos reutilizaveis.
+ * Bootstrap............Sobrescreve os estilos.
+ *
+ */
+
+
+/*------------------------------------*\
+  #SETTINGS
+\*------------------------------------*/
+
+/**
+ * Reset
+ */
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    vertical-align: baseline;
+    box-sizing: border-box;
+}
+
+
+/**
+ * Global
+ */
+
+* {
+    margin: 0 auto;
+    padding: 0;
+    -webkit-transition: all ease 0.25s;
+    -o-transition: all ease 0.25s;
+    -moz-transition: all ease 0.25s;
+    -ms-transition: all ease 0.25s;
+    transition: all ease 0.25s;
+}
+
+body {
+    background-color: #fff;
+    font: 16px 'PT Sans', Arial, sans-serif;
+    color: #2b2b2b;
+    overflow-x: hidden;
+}
+
+a,
+a:focus,
+a:active {
+    color: #DD3416;
+}
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+/*img {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    display: block;
+}*/
+
+::selection,
+::-moz-selection {
+    background: #0476D5;
+    color: #fff;
+    text-shadow: none;
+}
+
+input:-moz-placeholder,
+textarea:-moz-placeholder {
+    color: #666;
+}
+
+
+
+
+/*------------------------------------*\
+  #BASE
+\*------------------------------------*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 { color: #2b2b2b; letter-spacing: -1px; }
+
+
+/**
+ * Classes Funcionais
+ */
+
+.font-12 { font-size: 12px; }
+.font-14 { font-size: 14px; }
+.font-18 { font-size: 18px; }
+.font-20 { font-size: 20px; }
+.font-24 { font-size: 24px; }
+
+.font-100 { font-weight: 100; }
+.font-400 { font-weight: 400; }
+.font-600 { font-weight: 600; }
+.font-700 { font-weight: 700; }
+.font-800 { font-weight: 800; }
+
+
+/**
+ * Bootstrap - alteramos estilos padroes
+ */
+
+.navbar {
+    /*margin-bottom: 0;
+    min-height: auto;
+    border-radius: 0;
+    border: 0;*/
+}
+
+.navbar-brand {
+    /*height: auto;*/
+    /*line-height: normal;*/
+    /*padding: 0 15px;*/
+}
+
+.navbar-brand > img {
+    /*margin-top: 15px;*/
+}
+
+/*.navbar-nav {
+    margin-top: 7px;
+}*/
+
+.nav.navbar-nav > li > a,
+.nav.navbar-nav > li > a {
+    color: #fff;
+
+    background: linear-gradient(to right, rgba(51,178,204, .90) 50%, transparent 50%);
+    background-size: 217% 100%;
+    background-position:right bottom;
+}
+
+.nav > li > a:focus,
+.nav > li > a:hover,
+.nav > li.active > a {
+    /*background-color: #cd361d;*/
+    background-color: transparent;
+    background-position:left bottom;
+}
+
+
+
+/*------------------------------------*\
+  #TITULOS
+\*------------------------------------*/
+
+/**
+ * 
+ */
+
+.titulo {
+    font-weight: 300;
+    text-align: center;
+}
+
+.sub-titulo {
+    text-align: center;
+}
+
+
+
+/*------------------------------------*\
+  #BLOCOS
+\*------------------------------------*/
+
+/**
+ * Header.
+ */
+
+.header {
+    background: #fff url("../img/banner.jpg") no-repeat top center / cover;
+    height: 765px;
+    padding: 30px 30px 0;
+    overflow: hidden;
+}
+
+    .navbar-brand__startups {
+        margin-left: 15px;
+    }
+
+
+
+
+/**
+ * Conteudo principal
+ */
+
+.meio__ferramentas {
+    text-align: center;
+    font-family: "Segoe UI Light",arial,sans-serif;
+}
+
+    .titulo__ferramentas { margin-top: -20px; }
+
+    .ferramentas__titulo-descricao {
+        font-size: 21px;
+        margin: 0 0 40px;
+    }
+
+    .ferramentas__subtitulo {
+        font-size: 28px;
+        font-weight: 600;
+    }
+
+    .ferramentas__esquerda,
+    .ferramentas__direita { letter-spacing: -1px; }
+
+
+.meio__conjunto {
+    background: #fff url("../img/bg-grunge.jpg") no-repeat bottom center;
+    font-family: "Segoe UI Light",arial,sans-serif;
+    font-size: 17px;
+    position: relative;
+    z-index: 0;
+}
+
+    .titulo__conjunto { margin: 50px 0 25px 0; }
+
+    .conjunto__titulo-descricao {
+        font-size: 21px;
+        margin: 0 0 40px;
+    }
+
+    .conjunto__meninas {
+        margin-top: 30px;
+    }
+
+        .conjunto__leticia { text-align: right; }
+        .conjunto__talicia { text-align: left; }
+
+            .conjunto__leticia-desc,
+            .conjunto__talicia-desc { margin-top: 50px; letter-spacing: -1px; }
+
+            .img-leticia {
+                float: right;
+                margin-top: 35px;
+                margin-right: -50px;
+                margin-left: 40px;
+            }
+
+            .img-talicia {
+                float: left;
+                margin-left: -50px;
+                margin-right: 40px;
+            } 
+
+            .conjunto__nome {
+                font-size: 40px;
+                font-family: 'Segoe UI Semibold';
+                margin-bottom: 0;
+            }
+
+            .conjunto__sobrenome {
+                display: block;
+                font-size: 21px;
+            }
+
+            .conjunto__idade {
+                font-size: 17px;
+            }
+
+.meio__parceira {
+    background: #fff url("../img/bg-barra-vermelha.jpg") no-repeat top center;
+    min-height: 448px;
+    position: relative;
+    z-index: 1;    
+}
+
+    .parceira__titulo {        
+        color: #fff;
+        font-size: 38px;
+        font-family: "Segoe UI Light",arial,sans-serif;
+        margin-top: 60px;
+    }
+
+    .meio__parceira .media {
+        margin-top: 25px;
+    }
+
+    .meio__parceira .media,
+    .meio__parceira .media-heading { color: #fff; }
+
+    .meio__parceira .media-heading {
+        font-size: 27px;
+        line-height: 20px;
+        margin-top: 15px;
+        font-family: 'Segoe UI Semibold';
+    }
+
+        .meio__parceira .media-heading small {
+            font-size: 17px;
+            color: #fff;
+            font-family: 'Segoe UI Light';
+        } 
+
+    .meio__parceira .media-left {
+        padding-right: 30px;
+    }
+
+    .meio__parceira .media-body {
+        font-size: 17px;
+        font-family: 'Segoe UI Light';
+    }     
+
+    .parceria__curtiu-conhece {
+        margin-top: 120px;
+        margin-bottom: 50px;
+    }
+
+        .parceria__curtiu,
+        .parceria__conhece {
+            display: block;
+            font-size: 38px;
+            font-family: 'Segoe UI Light';
+            color: #dd3416;
+            margin-bottom: 10px;
+        }
+
+        .parceria__btn-link {
+            display: block;
+            background-color: #DD3416;
+            color: #fff;
+            font-size: 17px;
+            text-align: left;
+            margin-top: 15px;
+            padding: 4px 12px;
+            border-radius: 0;
+        }
+
+        .parceria__btn-link:hover,
+        .parceria__btn-link:focus {
+            background-color: #C62F13;
+            color: #fff;
+        }
+
+    .parceria__instituto-premio {
+        font-family: 'Segoe UI Light';
+    }
+
+    .parceria__instituto-premio img {
+        max-width: 150px;
+    }
+
+        .instituto-premio__titulo {
+            font-size: 38px;
+            margin-bottom: 20px;
+        }
+
+.meio__motivos {
+    margin-top: 30px;
+}
+
+    .motivos__apps {
+        text-align: right;
+        padding-top: 15px;
+    }
+
+        .motivos__apps img {
+            max-height: 32px;
+            margin-right: 15px;
+        }
+
+    .motivos__cta {
+        background-color: #db3416;
+        color: #fff;
+        font-size: 22px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .motivos__cta a,
+    .motivos__cta a:hover,
+    .motivos__cta a:focus {
+        color: #fff;
+        text-decoration: none;
+    }
+
+
+
+/**
+ * Footer geral
+ */
+.footer {
+    background-color: #F2F2F2;
+    color: #808080;
+    font-size: 12px;
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+    .footer a {
+        color: #808080;
+        font-size: 12px;
+        text-decoration: none;
+    }
+
+    .footer__links {
+        margin-top: 25px;
+    }
+
+        .footer__links a {
+            float: left;
+            margin-right: 20px;
+        }
+
+    .footer__copyright {
+        text-align: right;
+    }
+
+    .footer__copyright-logo {
+        width: 100px;
+        margin-bottom: 5px;
+        display: inline-block;
+    }
+
+    .footer__copyright-ms {
+        margin: 0;
+    }
+
+
+
+/**
+ * Erro404
+ */
+.erro404 {
+    color: #666;
+    background: none;
+}
+
+.erro404 .titulo {
+    font-family: "Segoe UI Light",Arial,sans-serif;
+}
+
+.erro404 .header__btn-experimente {
+    border: 2px solid #DD3416;
+    color: #DD3416;
+    font-size: 20px;
+    font-family: "Segoe UI Light",Arial,sans-serif;
+}
+
+.Erro404 {
+    margin: 10% auto 0px;
+}
+
+
+
+/*Botao que leva de volta ao topo*/
+.scrollup {
+    width: 80px;
+    height: 64px;
+    position: fixed;
+    bottom: 50px;
+    right: -80px;
+    z-index: 9999999;
+    /*display: none;*/
+    /*text-indent: -9999px;*/
+    background: url('https://c.s-microsoft.com/pt-br/CMSImages/wb_Icon_JumpToTop.png?version=af6955b1-d62c-ba2d-a0f5-5d60475e2d90') no-repeat;
+    background-color:#DD3416;
+    transition: all ease 0.25s;
+    background-position: center 90%;
+    background-size: 16px;
+    text-decoration: none;
+    text-align: center;
+    font-family: "Segoe UI Light",Arial,sans-serif;
+    border: 1px solid white;
+}
+
+.scrollup:hover{
+   background-color: #cd361d;
+}
+
+.scrollup a {
+    display: block;
+    height: 100%;
+    padding-top: 10px;
+}
+
+.scrollup a:hover {
+   text-decoration: none;
+}
+
+.interiorScrollup {
+   color: #fff;
+}
+
+
+/*------------------------------------*\
+  #MODIFICADORES
+\*------------------------------------*/
+
+/**
+ * Modificadores de estilo gerais.
+ */
