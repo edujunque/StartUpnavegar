@@ -3,139 +3,88 @@ $(document).ready(function () {
 
     //$('html, body').animate({ scrollTop: 0 }, 50);
 
-    //acao de click no menu
-    $(".ancora__nuvem").on('click', function (event) {
-        event.preventDefault();
-        $(".meio__ferramentas").scrollView();        
-    });   
+    //animacoes com animate.css
+    $('.navbar').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
+        $('.header__frase').show().addClass('bounceInLeft');
+    });    
 
+    //acao de click no menu
+    // $(".").on('click', function (event) {
+    //     event.preventDefault();
+    //     $(".").scrollView();        
+    // });   
 
     //anima elemento estar visivel na tela
-    if (w > 991) {
-        $('.meio__ferramentas').onScreen({
-           container: window,
-           direction: 'vertical',
-           doIn: function() {
-             // Do something to the matched elements as they come in
-             $(this).addClass("animated slideInUp");     
-           },
-           doOut: function() {
-             // Do something to the matched elements as they get off scren
-           },
-           tolerance: 0,
-           throttle: 50,
-           toggleClass: 'onScreen',
-        });
+    $('.section__quem-somos').onScreen({
+    container: window,
+    direction: 'vertical',
+    doIn: function() {
+      // Do something to the matched elements as they come in
+      $(this).addClass("fundo");
+    },
+    doOut: function() {
+      // Do something to the matched elements as they get off scren
+    },
+    tolerance: 500,
+    throttle: 50,
+    //toggleClass: 'onScreen',
+    });
 
-        $('.meio__conjunto').onScreen({
-           container: window,
-           direction: 'vertical',
-           doIn: function() {
-             // Do something to the matched elements as they come in
-             $(this).addClass("animated slideInUp");     
+    //navegar em numeros
+    $('#capitalMovimentado').circliful({
+      foregroundColor: '#c1c0c1',
+      backgroundColor: '#696969',    
+      text: 'CAPTIAL MOVIMENTADO P/ STARTUPS ATENDIDAS',            
+      textBelow: true,
+      textColor: '#FFF',
+      noPercentageSign: true,
+      //animateInView: true,
+      percent: 38,
+    });
 
-            $(this).one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
-                $(".conjunto__nome").addClass('animated pulse');
-            });             
-           },
-           doOut: function() {
-             // Do something to the matched elements as they get off scren
-           },
-           tolerance: 50,
-           throttle: 50,
-           toggleClass: 'onScreen',
-        });
+    $('#tecnologiasUtilizadas').circliful({
+      foregroundColor: '#c1c0c1',
+      backgroundColor: '#696969',      
+      text: 'TECNOLOGIAS UTILIZADAS',            
+      textBelow: true,
+      textColor: '#FFF',
+      noPercentageSign: true,
+      //animateInView: true,
+      percent: 86,
+    });
 
-        $('.meio__parceira').onScreen({
-           container: window,
-           direction: 'vertical',
-           doIn: function() {
-             // Do something to the matched elements as they come in
-             $(".meio__parceira .media").addClass("animated slideInLeft");         
-             $(".meio__parceira .parceria__curtiu-conhece").addClass("animated slideInUp");
-             $(".meio__parceira .img-devices").addClass("animated slideInRight");
-           },
-           doOut: function() {
-             // Do something to the matched elements as they get off scren
-           },
-           tolerance: 0,
-           throttle: 50,
-           toggleClass: 'onScreen',
-        }); 
+    $('#usuariosImpactados').circliful({
+      foregroundColor: '#c1c0c1',
+      backgroundColor: '#696969',      
+      text: 'USUARIOS IMPACTADOS',            
+      textBelow: true,
+      textColor: '#FFF',
+      noPercentageSign: true,
+      //animateInView: true,
+      percent: 32.0000,      
+    });
 
-        $('.parceria__instituto-premio').onScreen({
-           container: window,
-           direction: 'vertical',
-           doIn: function() {
-             // Do something to the matched elements as they come in
-             $(".parceria__instituto-premio img").addClass("animated pulse");         
-           },
-           doOut: function() {
-             // Do something to the matched elements as they get off scren
-           },
-           tolerance: 0,
-           throttle: 50,
-           toggleClass: 'onScreen',
-        }); 
-    }  
+    $('#startupsAtendidas').circliful({
+      foregroundColor: '#c1c0c1',
+      backgroundColor: '#696969',      
+      text: 'STARTUPS ATENDIDAS EM 2016',            
+      textBelow: true,
+      textColor: '#FFF',
+      noPercentageSign: true,
+      //animateInView: true,
+      percent: 2.658,      
+      decimals: 3,
+    });
     
     //init bx slider slider    
     if (w < 991) {
-        $('.conjunto__meninas').bxSlider({
-            //auto: true,
-            //infiniteLoop: false,
-            adaptiveHeight: true,
-            pager: false
-        });
-    }
-
-    //conjunto__meninas - ao clicar na seta subir ao texto
-    if (w < 767) {
-      $(".bx-next").on('click', function (event) {
-          //event.preventDefault();
-          $("#conjunto__scroll").scrollView();        
-      });    
+      $('.').bxSlider({
+        //auto: true,
+        //infiniteLoop: false,
+        adaptiveHeight: true,
+        pager: false
+      });
     }    
-
-    //troca elemento de lugar quando celular
-    if (w < 767) { 
-        //leticia 
-        elemento1L = $('#original-l');
-        elemento2L = $('#movido-l');
-
-        lElemento1 = elemento1L.clone();
-        lElemento2 = elemento2L.clone();
-
-        elemento1L.replaceWith(lElemento2);
-        elemento2L.replaceWith(lElemento1);
-
-        //talicia
-        elemento1T = $('#original-t');
-        elemento2T = $('#movido-t');
-
-        tElemento1 = elemento1T.clone();
-        tElemento2 = elemento2T.clone();
-
-        elemento1T.replaceWith(tElemento2);
-        elemento2T.replaceWith(tElemento1); 
-
-        //paula bellizia
-        elemento1P = $('#original-p');
-        elemento2P = $('#movido-p');
-
-        pElemento1 = elemento1P.clone();
-        pElemento2 = elemento2P.clone();
-
-        elemento1P.replaceWith(pElemento2);
-        elemento2P.replaceWith(pElemento1); 
-    }     
-
-    //fecha menu toggle
-    if (w < 1024) {
-        $(".ancora__nuvem, .ancora__conjunto, .ancora__instituto").on('click', function (event) {
-            $('.navbar-toggle').click();
-        });
-    }
 });
 
 //script para rolar até elemento
