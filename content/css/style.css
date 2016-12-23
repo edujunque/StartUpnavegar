@@ -93,7 +93,7 @@ h2,
 h3,
 h4,
 h5,
-h6 { color: #2b2b2b; letter-spacing: -1px; }
+h6 { color: #fff; font-weight: 900; }
 
 
 /**
@@ -264,9 +264,56 @@ h6 { color: #2b2b2b; letter-spacing: -1px; }
 
 /*em numero*/
 .section__numeros {
-    background: url("../img/fundo-em-numeros.jpg") no-repeat top center / cover;
-    height: 435px;
+    background: url("../img/fundo-em-numeros__big.jpg") no-repeat center / cover;
+    background-attachment: fixed;
+    min-height: 435px;
+    text-align: center;
+    padding-top: 60px;
+    padding-bottom: 100px;
 }
+
+/*o que fazemos*/
+.section__fazemos {
+    color: #fff;
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+
+    .section__fazemos h1 {
+        color: #33b2cc;
+        text-align: center;        
+    }
+
+    .section__fazemos h2 {
+        font-weight: 100;
+        color: #7d7d7d;
+        text-align: center;
+        margin-top: 0;
+        margin-bottom: 50px;
+    }
+
+    .section__fazemos h3 {
+        font-size: 26px;
+    }    
+
+    .fazemos__box {
+        height: 482px;
+        padding: 30px 40px;
+    }
+
+    .fazemos__box.negocios { background: url("../img/bg-modelo-negocios.png") no-repeat center; }
+    .fazemos__box.software { background: url("../img/bg-dev-software.png") no-repeat center; }
+    .fazemos__box.operacao { background: url("../img/bg-sustentacao.png") no-repeat center; }
+
+        .box__icone {
+            text-align: center;
+            margin: 20px 0 0 0;
+        }
+
+        .box__texto {
+            margin: 80px 0 0 0;
+        }        
+
 
 
 /**

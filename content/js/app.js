@@ -6,7 +6,7 @@ $(document).ready(function () {
     //animacoes com animate.css
     $('.navbar').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
         $('.header__frase').show().addClass('bounceInLeft');
-    });    
+    });             
 
     //acao de click no menu
     // $(".").on('click', function (event) {
@@ -30,50 +30,92 @@ $(document).ready(function () {
     //toggleClass: 'onScreen',
     });
 
+    $('.section__fazemos').onScreen({
+    container: window,
+    direction: 'vertical',
+    doIn: function() {
+      // Do something to the matched elements as they come in
+      $('.negocios').addClass("fadeInLeft");
+
+      $('.negocios').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
+          $('.software').show().addClass('fadeInLeft');
+      });        
+
+      $('.software').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
+          $('.operacao').show().addClass('fadeInLeft');
+      });
+    },
+    doOut: function() {
+      // Do something to the matched elements as they get off scren
+    },
+    tolerance: 200,
+    throttle: 50,
+    //toggleClass: 'onScreen',
+    });    
+
     //navegar em numeros
     $('#capitalMovimentado').circliful({
       foregroundColor: '#c1c0c1',
-      backgroundColor: '#696969',    
-      text: 'CAPTIAL MOVIMENTADO P/ STARTUPS ATENDIDAS',            
+      foregroundBorderWidth: '10',
+      backgroundColor: '#696969', 
+      backgroundBorderWidth: '10',   
+      text: 'CAPITAL MOVIMENTADO P/ <tspan y="205" x="97">STARTUPS ATENDIDAS</tspan>',
       textBelow: true,
       textColor: '#FFF',
-      noPercentageSign: true,
-      //animateInView: true,
-      percent: 38,
+      textStyle: 'font-size: 12px; font-weight: bold;',
+      replacePercentageByText: 'R$ 1 mi',
+      noPercentageSign: true,      
+      fontColor: '#fff',      
+      animateInView: true,
+      percent: 85,
     });
 
     $('#tecnologiasUtilizadas').circliful({
       foregroundColor: '#c1c0c1',
-      backgroundColor: '#696969',      
-      text: 'TECNOLOGIAS UTILIZADAS',            
+      foregroundBorderWidth: '10',
+      backgroundColor: '#696969', 
+      backgroundBorderWidth: '10',      
+      text: 'TECNOLOGIAS <tspan y="205" x="97">UTILIZADAS</tspan>',
       textBelow: true,
       textColor: '#FFF',
-      noPercentageSign: true,
-      //animateInView: true,
-      percent: 86,
+      textStyle: 'font-size: 12px; font-weight: bold;',
+      replacePercentageByText: '86',
+      noPercentageSign: true,      
+      fontColor: '#fff',
+      animateInView: true,
+      percent: 65,
     });
 
     $('#usuariosImpactados').circliful({
       foregroundColor: '#c1c0c1',
-      backgroundColor: '#696969',      
+      foregroundBorderWidth: '10',
+      backgroundColor: '#696969', 
+      backgroundBorderWidth: '10',      
       text: 'USUARIOS IMPACTADOS',            
       textBelow: true,
       textColor: '#FFF',
-      noPercentageSign: true,
-      //animateInView: true,
-      percent: 32.0000,      
+      textStyle: 'font-size: 12px; font-weight: bold;',
+      replacePercentageByText: '32.000',
+      noPercentageSign: true,      
+      fontColor: '#fff',
+      animateInView: true,
+      percent: 60,
     });
 
     $('#startupsAtendidas').circliful({
       foregroundColor: '#c1c0c1',
-      backgroundColor: '#696969',      
-      text: 'STARTUPS ATENDIDAS EM 2016',            
+      foregroundBorderWidth: '10',
+      backgroundColor: '#696969', 
+      backgroundBorderWidth: '10',       
+      text: 'STARTUPS ATENDIDAS <tspan y="205" x="97">EM 2016</tspan>',
       textBelow: true,
       textColor: '#FFF',
-      noPercentageSign: true,
-      //animateInView: true,
-      percent: 2.658,      
-      decimals: 3,
+      textStyle: 'font-size: 12px; font-weight: bold;',
+      replacePercentageByText: '2.658',
+      noPercentageSign: true,      
+      fontColor: '#fff',
+      animateInView: true,
+      percent: 95,
     });
     
     //init bx slider slider    
