@@ -53,11 +53,11 @@
                     <!-- Collect the nav links, forms, and other content for toggling -->
                     <div class="collapse navbar-collapse" id="navbar-collapse">
                       <ul class="nav navbar-nav navbar-right">
-                        <li class="active"><a href="#">Quem Somos</a></li>
-                        <li><a href="#">O Que Fazemos</a></li>
-                        <li><a href="#">Trabalhos</a></li>
-                        <li><a href="#">Parceiros</a></li>
-                        <li><a href="#">Fale Conosco</a></li>
+                        <li><a href="#" data-menu="quemsomos">Quem Somos</a></li>
+                        <li><a href="#" data-menu="fazemos">O Que Fazemos</a></li>
+                        <li><a href="#" data-menu="trabalhos">Trabalhos</a></li>
+                        <li><a href="#" data-menu="parceiros">Parceiros</a></li>
+                        <li><a href="#" data-menu="contato">Fale Conosco</a></li>
                       </ul>
                     </div><!-- /.navbar-collapse -->
                   </div><!-- /.container-fluid -->
@@ -86,7 +86,7 @@
                         </div>  
                     </div>                      
                 </div>  
-            </section> 
+            </section><!-- /*quem-somos -->
 
             <section class="section__numeros">
                 <div class="container">
@@ -112,7 +112,7 @@
                         </div>
                     </div>
                 </div>
-            </section>
+            </section><!-- /*numeros -->
 
             <section class="section__fazemos">
                 <div class="container">    
@@ -163,20 +163,294 @@
                         </div> 
                     </div>                     
                 </div>  
-            </section>             
+            </section><!-- /*fazemos -->         
+
+            <section class="section__planejamos">
+                <div class="container">    
+                    <div class="row">
+                            <div class="col-xs-12">
+                                <h1 style="margin-bottom:0;">Planejamos e executamos processos ageis e eficientes</h1>
+                                <h2>Conheça o nosso processo de trabalho:</h2>
+                            </div>
+
+                            <div class="col-sm-3">
+                                <article class="planejamos__box planejamento animated">
+                                    <div class="box__icone">
+                                        <img src="content/img/ico-planejamento.png" alt="Planejamento" class="">
+                                    </div>
+
+                                    <div class="box__texto">
+                                        <h3>Planejamento</h3>
+                                        <p>Entenderemos a sua necessidade e orientaremos tecnologicamente para atingimento dos seus objetivos com o apoio de profissionais de negócios, tecnologia e design.</p>
+                                    </div>
+                                </article>
+                            </div>  
+
+                            <div class="col-sm-3">
+                                <article class="planejamos__box design animated" style="display:none;">
+                                    <div class="box__icone">
+                                        <img src="content/img/ico-design-ux.png" alt="Design e UX" class="">
+                                    </div>
+
+                                    <div class="box__texto">
+                                        <h3>Design e UX</h3>
+                                        <p>Desenvolvemos desde a marca e o design, até a experiência de uso em cada uma das  plataformas para o lançamento da sua ideia.</p>
+                                    </div>
+                                </article>
+                            </div> 
+
+                            <div class="col-sm-3">
+                                <article class="planejamos__box mvp animated" style="display:none;">
+                                    <div class="box__icone">
+                                        <img src="content/img/ico-mvp.png" alt="MVP" class="">
+                                    </div>
+
+                                    <div class="box__texto">
+                                        <h3>MVP</h3>
+                                        <p>Atendemos os prazos com qualidade para entregarmos um produto mínimo viável de forma ágil e assim podermos iniciar a validação da ideia no mercado.</p>
+                                    </div>
+                                </article>
+                            </div>                            
+  
+                            <div class="col-sm-3">
+                                <article class="planejamos__box manutencao animated" style="display:none;">
+                                    <div class="box__icone">
+                                        <img src="content/img/ico-manutencao.png" alt="Manutenção" class="">
+                                    </div>
+
+                                    <div class="box__texto">
+                                        <h3>Manutenção</h3>
+                                        <p>Acompanhamos o processo de validação dando todo o suporte para realizarmos melhorias na plataforma.</p>
+                                    </div>
+                                </article>
+                            </div>  
+
+                            <div class="planejamos__observacao col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 animated" style="display:none;">
+                                <h4>Nosso método de trabalho é o seu método de trabalho!</h4>
+                                <h5>AGILE, LEAN ou SPRINTS. Possuímos equipes dinâmicas prontas realizar os projetos  com diferentes metodologias de trabalho.</h5>
+                            </div>
+                        </div> 
+                    </div>                     
+                </div>  
+            </section><!-- /*planejamos -->
+
+            <section class="section__projetos">
+                <div class="container">    
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <h1>Projetos Desenvolvidos</h1>
+                            <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer imperdiet, metus a mattis porta, lacus felis ultricies lorem, pharetra gravida metus mi ut ligula. Pellentesque faucibus odio facilisis dolor pharetra, sit amet fringilla lacus rhoncus.</h2>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="projetos_slider">
+                    <div class="container animated" style="opacity:0;">
+                        <div class="row">
+                            <ul class="bxslider">
+                                <li>
+                                    <div class="col-sm-5">
+                                        <img src="content/img/clientes/liga-pc.png" />
+                                    </div>
+
+                                    <div class="col-sm-6">
+                                        <img src="content/img/clientes/liga.jpg" class="logotipo" />
+                                        
+                                        <p class="texto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer imperdiet, metus a mattis porta, lacus felis ultricies lorem, pharetra gravida metus mi ut ligula.</p>
+                                        
+                                        <p class="subtexto"><span class="font-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span><br /> Integer imperdiet, metus a mattis porta.</p>
+                                        
+                                        <a href="" class="url" target="_blank">www.construliga.com.br</a>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <div class="col-sm-5">
+                                        <img src="content/img/clientes/liga-pc.png" />
+                                    </div>
+
+                                    <div class="col-sm-6">
+                                        <img src="content/img/clientes/liga.jpg" class="logotipo" />
+                                        
+                                        <p class="texto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer imperdiet, metus a mattis porta, lacus felis ultricies lorem, pharetra gravida metus mi ut ligula.</p>
+                                        
+                                        <p class="subtexto"><span class="font-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span><br /> Integer imperdiet, metus a mattis porta.</p>
+                                        
+                                        <a href="" class="url" target="_blank">www.construliga.com.br</a>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <div class="col-sm-5">
+                                        <img src="content/img/clientes/liga-pc.png" />
+                                    </div>
+
+                                    <div class="col-sm-6">
+                                        <img src="content/img/clientes/liga.jpg" class="logotipo" />
+                                        
+                                        <p class="texto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer imperdiet, metus a mattis porta, lacus felis ultricies lorem, pharetra gravida metus mi ut ligula.</p>
+                                        
+                                        <p class="subtexto"><span class="font-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span><br /> Integer imperdiet, metus a mattis porta.</p>
+                                        
+                                        <a href="" class="url" target="_blank">www.construliga.com.br</a>
+                                    </div>
+                                </li> 
+
+                                <li>
+                                    <div class="col-sm-5">
+                                        <img src="content/img/clientes/liga-pc.png" />
+                                    </div>
+
+                                    <div class="col-sm-6">
+                                        <img src="content/img/clientes/liga.jpg" class="logotipo" />
+                                        
+                                        <p class="texto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer imperdiet, metus a mattis porta, lacus felis ultricies lorem, pharetra gravida metus mi ut ligula.</p>
+                                        
+                                        <p class="subtexto"><span class="font-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span><br /> Integer imperdiet, metus a mattis porta.</p>
+                                        
+                                        <a href="" class="url" target="_blank">www.construliga.com.br</a>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <div class="col-sm-5">
+                                        <img src="content/img/clientes/liga-pc.png" />
+                                    </div>
+
+                                    <div class="col-sm-6">
+                                        <img src="content/img/clientes/liga.jpg" class="logotipo" />
+                                        
+                                        <p class="texto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer imperdiet, metus a mattis porta, lacus felis ultricies lorem, pharetra gravida metus mi ut ligula.</p>
+                                        
+                                        <p class="subtexto"><span class="font-600">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</span><br /> Integer imperdiet, metus a mattis porta.</p>
+                                        
+                                        <a href="" class="url" target="_blank">www.construliga.com.br</a>
+                                    </div>
+                                </li> 
+                            </ul>
+                        </div>
+                    </div>
+                </div>                  
+            </section><!-- /*projetos -->
+
+            <section class="section__parceiros">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <h1>Quem está conosco nessa jornada</h1>
+                            <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer imperdiet, metus a mattis porta, lacus felis ultricies lorem, pharetra gravida metus mi ut ligula. Pellentesque faucibus odio facilisis dolor pharetra, sit amet fringilla lacus rhoncus.</h2>
+                        </div>
+
+                        <div class="parceiros__logos col-xs-6 col-sm-3 text-center animated" style="opacity:0;">
+                            <img src="content/img/parceiros/logo-spartanerp.png" alt="Spartan-ERP" class="img-responsive" />
+                        </div>
+
+                        <div class="parceiros__logos col-xs-6 col-sm-3 text-center animated" style="opacity:0;">
+                            <img src="content/img/parceiros/logo-ideianoar.png" alt="Ideia no Ar" class="img-responsive" />
+                        </div>
+
+                        <div class="parceiros__logos col-xs-6 col-sm-3 text-center animated" style="opacity:0;">
+                            <img src="content/img/parceiros/logo-spartanerp.png" alt="Spartan-ERP" class="img-responsive" />
+                        </div>
+
+                        <div class="parceiros__logos col-xs-6 col-sm-3 text-center animated" style="opacity:0;">
+                            <img src="content/img/parceiros/logo-ideianoar.png" alt="Ideia no Ar" class="img-responsive" />
+                        </div>
+                    </div>
+                </div>
+            </section><!-- /*parceiros --> 
+
+            <section class="section__contato">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12">
+                            <h1>Fale conosco! Teremos prazer em encarar um desafio com você.</h1>
+                            <h2>Ligue, mande um email ou venha aqui tomar um café com a gente!</h2>
+                        </div>
+
+                        <div class="contato__dados col-xs-12 col-sm-4 col-sm-offset-1">                                                    
+                            <div class="media">
+                              <div class="media-left">
+                                <img class="media-object" src="content/img/ico-fone.png" alt="Telefone" />
+                              </div>
+
+                              <div class="media-body contato__texto">
+                                (19) 3014-0706
+                              </div>
+                            </div>
+
+                            <div class="media">
+                              <div class="media-left">
+                                <img class="media-object" src="content/img/ico-email.png" alt="Email" />
+                              </div>
+
+                              <div class="media-body contato__texto">
+                                contato@navegarti.com.br
+                              </div>
+                            </div>
+
+                            <div class="media">
+                              <div class="media-left">
+                                <img class="media-object" src="content/img/ico-fb.png" alt="Facebook" />
+                              </div>
+
+                              <div class="media-body contato__texto">
+                                facebook.com/navegarti
+                              </div>
+                            </div>  
+                            
+                            <div class="media">
+                              <div class="media-left media-middle">
+                                <img class="media-object" src="content/img/ico-endereco.png" alt="Endereço" />
+                              </div>
+
+                              <div class="media-body contato__texto">
+                                Rua Sampaio Peixoto, 252<br />
+                                Cambuí - CEP 13024-420<br />
+                                Campinas - SP<br />
+                                <a href="https://www.google.com/maps?ll=-22.889437,-47.05223&z=19&t=m&hl=pt-BR&gl=BR&mapclient=embed&cid=5495001222522704462" target="_blank">ver mapa</a>
+                              </div>
+                            </div>                             
+                        </div>
+
+                        <div class="contato__form col-xs-12 col-sm-6">
+                            <h3 class="text-center">Escreva pra gente!</h3>
+                            <br />
+
+                            <form class="form-validado">
+                              <div class="form-group">
+                                <input type="text" class="form-control" id="nome" placeholder="Nome Completo" required>
+                              </div>
+
+                              <div class="form-group">
+                                <input type="email" class="form-control" id="email" placeholder="Email" required>
+                              </div>
+
+                              <div class="form-group">
+                                <textarea class="form-control" rows="3" placeholder="Mensagem" required></textarea>
+                              </div>
+
+                              <button type="submit" id="enviar-mensagem" class="btn btn-default">Enviar Mensagem</button>
+                            </form>
+                        </div>                        
+                    </div>
+                </div>
+            </section><!-- /*contato --> 
         </main>
 
         <footer>
             <div class="footer">
-                <div class="container-fluid">
-                    <div class="text-left col-xs-6 col-sm-6">
-                        <img src="content/img/navegar.png" alt="" class="">
-                    </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="footer__copyright col-xs-6 col-sm-6">
+                            <img src="content/img/navegar.png" alt="NavegarTI" />
+                        </div>
 
-                    <div class="text-right col-xs-6 col-sm-6">
-                        <a href="#" alt="">Institucional</a>
-                        <a href="#" alt="">Facebook</a>
-                    </div>                        
+                        <div class="footer__links col-xs-6 col-sm-6">
+                            <a href="http://www.navegarti.com.br" alt="NavegarTI" target="_blank">Institucional</a>
+                            <a href="#" alt="">Facebook</a>
+                        </div>                        
+                    </div>
                 </div>
             </div>
         </footer>

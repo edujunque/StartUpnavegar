@@ -1,3 +1,10 @@
+/**
+ *
+ * Minificação do arquivo Koala http://koala-app.com/ 
+ * -- Arquivo index.html usa o arquivo minificado.
+ *
+ */
+
 $(document).ready(function () {
     var w = $(window).width();
 
@@ -9,10 +16,30 @@ $(document).ready(function () {
     });             
 
     //acao de click no menu
-    // $(".").on('click', function (event) {
-    //     event.preventDefault();
-    //     $(".").scrollView();        
-    // });   
+    $('[data-menu="quemsomos"]').on('click', function (event) {
+        event.preventDefault();
+        $(".section__quem-somos").scrollView();        
+    });
+
+    $('[data-menu="fazemos"]').on('click', function (event) {
+        event.preventDefault();
+        $(".section__fazemos").scrollView();        
+    });
+
+    $('[data-menu="trabalhos"]').on('click', function (event) {
+        event.preventDefault();
+        $(".section__projetos").scrollView();        
+    });
+
+    $('[data-menu="parceiros"]').on('click', function (event) {
+        event.preventDefault();
+        $(".section__parceiros").scrollView();        
+    });
+
+    $('[data-menu="contato"]').on('click', function (event) {
+        event.preventDefault();
+        $(".section__contato").scrollView();        
+    });
 
     //anima elemento estar visivel na tela
     $('.section__quem-somos').onScreen({
@@ -34,7 +61,6 @@ $(document).ready(function () {
     container: window,
     direction: 'vertical',
     doIn: function() {
-      // Do something to the matched elements as they come in
       $('.negocios').addClass("fadeInLeft");
 
       $('.negocios').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
@@ -48,10 +74,62 @@ $(document).ready(function () {
     doOut: function() {
       // Do something to the matched elements as they get off scren
     },
+    tolerance: 300,
+    throttle: 50,
+    }); 
+
+    $('.section__planejamos').onScreen({
+    container: window,
+    direction: 'vertical',
+    doIn: function() {
+      $('.planejamento').addClass("fadeInDown");
+
+      $('.planejamento').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
+          $('.design').show().addClass('fadeInDown');
+      });        
+
+      $('.design').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
+          $('.mvp').show().addClass('fadeInDown');
+      });
+
+      $('.mvp').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
+          $('.manutencao').show().addClass('fadeInDown');
+      });
+
+      $('.manutencao').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
+          $('.planejamos__observacao').show().addClass('fadeIn');
+      });      
+    },
+    doOut: function() {
+
+    },
     tolerance: 200,
     throttle: 50,
-    //toggleClass: 'onScreen',
-    });    
+    });
+
+    $('.section__projetos').onScreen({
+    container: window,
+    direction: 'vertical',
+    doIn: function() {
+      $('.projetos_slider .container').addClass("fadeInLeft").css('opacity', '1');
+    },
+    doOut: function() {
+    },
+    tolerance: 200,
+    throttle: 50,
+    }); 
+
+    $('.section__parceiros').onScreen({
+    container: window,
+    direction: 'vertical',
+    doIn: function() {
+      $('.parceiros__logos').addClass("fadeInDown").css('opacity', '0');
+    },
+    doOut: function() {
+    },
+    tolerance: 200,
+    throttle: 50,
+    });     
 
     //navegar em numeros
     $('#capitalMovimentado').circliful({
@@ -119,30 +197,45 @@ $(document).ready(function () {
     });
     
     //init bx slider slider    
-    if (w < 991) {
-      $('.').bxSlider({
+    //if (w < 991) {
+      $('.bxslider').bxSlider({
         //auto: true,
         //infiniteLoop: false,
-        adaptiveHeight: true,
-        pager: false
+        //adaptiveHeight: true,
+        //pager: false
       });
-    }    
+    //}  
+
+    //validacao do formulario 
+    $(".form-validado input, .form-validado textarea, .form-validado select").blur(function(){
+     if(($(this).val() == "" || $(".form-validado select").val() == "0") && $(this).prop('required'))
+         {
+           $(this).parent().addClass("tem-erro");
+         }
+    });
+
+    $("#enviar-mensagem").click(function(){
+     var cont = 0;
+     $(".form-validado input, .form-validado textarea, .form-validado select").each(function(){
+         if(($(this).val() == "" || $(".form-validado select").val() == "0") && $(this).attr('required'))
+             {
+              $(this).parent().addClass("tem-erro");
+              cont++;
+             }
+        });
+     if(cont == 0)
+         {
+            $("#contato").submit();
+         }
+    });       
 });
 
 //script para rolar até elemento
 $.fn.scrollView = function () {
     return this.each(function () {
-        var w = $(window).width();
-
-        if (w < 767 || w < 1024) {
-            $('html, body').animate({
-                scrollTop: $(this).offset().top - 70
-            }, 1000);
-        } else {
-            $('html, body').animate({
-                scrollTop: $(this).offset().top
-            }, 1000);
-        }
+      $('html, body').animate({
+          scrollTop: $(this).offset().top
+      }, 1000);
     });
 }
 
@@ -154,6 +247,7 @@ $(window).scroll(function () {
         $('.scrollup').css('right', '-80px');
     }
 });
+
 $('.scrollup').click(function () {
     $("html, body").animate({
         scrollTop: 0
