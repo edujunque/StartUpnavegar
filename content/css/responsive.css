@@ -19,6 +19,7 @@
 @media (max-width: 1024px) {    
     .navbar {
         margin-bottom: 0;
+        z-index: 50;
     }
 
     .navbar-header {
@@ -85,14 +86,294 @@
 }
 
 @media screen and (max-width: 991px) {
+    /**
+     * Header.
+     */
 
+    .header {
+        position: relative;
+    }
+
+        .header__frase {}
+
+            .header__frase h1 {
+                font-size: 34px;
+            }
+
+
+    /**
+     * Conteudo principal
+     */
+
+    /*quem somos*/
+    .section__quem-somos {
+        background-position: top left;
+        background-size: contain;
+    }
+
+    .section__quem-somos.fundo {
+        background-position: top left;
+    }
+
+        .quem-somos__texto {
+            transform: translate(-30px, 40px);
+        }
+
+            .quem-somos__texto p {
+                width: 100%;
+                line-height: 25px;
+            }
+
+            .quem-somos__link-site {
+                margin-top: 15px;
+            }
+
+            .quem-somos__texto h1 {
+                font-size: 30px;
+                margin: 0;
+                color: #7d7d7d;
+                font-weight: 600;
+            } 
+
+    /*em numero*/
+    .section__numeros {
+        min-height: 100%;
+    }
+
+    /*o que fazemos*/
+    .section__fazemos h3 {
+        font-size: 22px;
+    }    
+
+    .fazemos__box {
+        padding: 15px;
+    }
+
+        .fazemos__box .box__icone {
+            margin: 40px 0 0 0;
+        }
+
+        .fazemos__box .box__texto {
+            margin: 60px 0 0 0;
+        } 
+
+    /*projetos desenvolvidos*/
+    .projetos_slider {
+        background-position: 0 80px;
+        background-size: 100% 220px;
+        text-align: center;
+    }
+
+        .projetos_slider .texto {                
+            margin-top: 15px;
+            padding: 10px;
+            line-height: 20px;
+        }
+
+        .projetos_slider .subtexto {
+            margin-top: 10px;
+            margin-bottom: 15px;
+        }
+
+        .projetos_slider .url {
+            display: inline-block;
+        }        
+
+        /* bxslider */
+        .bx-wrapper .bx-pager {
+            bottom: -60px;
+        }
 }
 
 @media screen and (max-width: 767px) {
+    /**
+     * Header.
+     */
 
+    .header {
+        height: 480px;
+        padding: 15px;
+    }
+
+        .navbar-brand__startups {
+            width: 50%;
+        }
+
+        .header__frase {
+            left: 15px;
+            right: 15px;
+            padding: 15px;
+        }    
+
+            .header__frase h1 {
+                font-size: 22px;
+            }
+
+    .navbar-toggle {
+        margin-top: 20px;
+    }  
+
+    /**
+     * Conteudo principal
+     */
+
+    /*quem somos*/
+    .section__quem-somos {
+        padding-top: 70px; 
+        padding-bottom: 70px;
+    }
+
+        .quem-somos__texto {
+            transform: translate(0);
+            text-align: center;
+        }
+
+            .quem-somos__texto p {
+                margin-bottom: 30px;
+            }
+
+            .quem-somos__link-site {
+                float: none;
+            }
+
+            .quem-somos__texto h1 {
+                font-size: 36px;
+            } 
+
+    /*o que fazemos*/
+    .section__fazemos h3 {
+        font-size: 26px;
+    }    
+
+    .fazemos__box {
+        padding: 30px 40px;
+        margin-bottom: 30px;
+    }
+
+        .fazemos__box .box__icone {
+            margin: 20px 0 0 0;
+        }
+
+        .fazemos__box .box__texto {
+            margin: 80px 0 0 0;
+        }
+
+/*planejamos e executamos*/
+.section__planejamos {
+    text-align: center;
 }
 
-@media screen and (max-width: 1024px) and (orientation: landscape) {
+    .section__planejamos h1 {
+        font-size: 30px;
+    }
+
+    .section__planejamos h2 {
+        font-size: 22px;
+        margin-top: 15px;
+    }
+
+    .section__planejamos h3 {
+        font-size: 26px;
+    }    
+
+    .planejamos__box {
+        margin-bottom: 50px;
+    }
+
+    .planejamos__observacao {
+        background-color: #fff;
+        background-color: rgba(255,255,255,0.2);
+        border-radius: 25px;
+        padding: 30px;
+        margin-top: 50px;
+    }
+
+        .planejamos__observacao h4,
+        .planejamos__observacao h5 {
+            font-size: 17px;
+        }
+
+        .planejamos__observacao h5 {
+            font-weight: 100;
+        }         
+
+    /*projetos desenvolvidos*/
+    .projetos_slider {
+        background: none;
+    }
+
+        .projetos_slider .texto {                
+            margin-top: 10px;
+            padding: 10px;
+        }
+
+        .projetos_slider .subtexto {
+            font-size: 12px;
+            margin-top: 10px;
+            margin-bottom: 15px;
+        }
+
+        /* bxslider */
+        .bx-wrapper .bx-pager {
+            bottom: -60px;
+        } 
+
+        .bx-wrapper .bx-prev,
+        .bx-wrapper .bx-next {            
+            margin-top: 0;
+            top: auto !important;
+            bottom: -75px;
+            background-size: 50%;
+            background-position: center;
+        } 
+
+        .bx-wrapper .bx-prev:hover { background-position: center; }
+        .bx-wrapper .bx-next:hover { background-position: center; }
+
+    /*planejamos e executamos*/
+    .section__parceiros {
+        padding-top: 40px;
+    }
+
+        .section__parceiros h1 {
+            font-size: 30px;
+        }
+
+        .parceiros__logos {
+            margin-bottom: 25px;
+        }
+
+    /*contato*/
+    .section__contato {
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
+
+        .section__contato h1 {
+            font-size: 30px;
+        }
+
+        .contato__dados {
+            margin-bottom: 30px;
+        }
+
+        .contato__form {
+            padding: 15px;
+        }
+
+
+    /**
+     * Footer geral
+     */
+    .footer__links {
+        text-align: right;
+        margin-top: 15px;
+    }
+
+        .footer__links a {
+            font-size: 15px;
+            margin-right: 15px;
+        }
 
 }
 
@@ -100,10 +381,14 @@
 
 }
 
+/*landscape*/
+@media screen and (max-width: 1024px) and (orientation: landscape) {
+
+}
+
 @media screen and (max-width: 991px) and (orientation: landscape) {    
  
 }
-
 
 @media screen and (max-width: 321px) and (orientation: landscape) { 
 

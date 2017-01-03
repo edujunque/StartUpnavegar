@@ -10,6 +10,13 @@ $(document).ready(function () {
 
     //$('html, body').animate({ scrollTop: 0 }, 50);
 
+
+    //menu
+    $('.navbar-toggle').click(function(){
+      $(this).toggleClass('open');
+    });        
+
+
     //animacoes com animate.css
     $('.navbar').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
         $('.header__frase').show().addClass('bounceInLeft');
@@ -42,94 +49,112 @@ $(document).ready(function () {
     });
 
     //anima elemento estar visivel na tela
-    $('.section__quem-somos').onScreen({
-    container: window,
-    direction: 'vertical',
-    doIn: function() {
-      // Do something to the matched elements as they come in
-      $(this).addClass("fundo");
-    },
-    doOut: function() {
-      // Do something to the matched elements as they get off scren
-    },
-    tolerance: 500,
-    throttle: 50,
-    //toggleClass: 'onScreen',
-    });
-
-    $('.section__fazemos').onScreen({
-    container: window,
-    direction: 'vertical',
-    doIn: function() {
-      $('.negocios').addClass("fadeInLeft");
-
-      $('.negocios').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
-          $('.software').show().addClass('fadeInLeft');
-      });        
-
-      $('.software').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
-          $('.operacao').show().addClass('fadeInLeft');
-      });
-    },
-    doOut: function() {
-      // Do something to the matched elements as they get off scren
-    },
-    tolerance: 300,
-    throttle: 50,
-    }); 
-
-    $('.section__planejamos').onScreen({
-    container: window,
-    direction: 'vertical',
-    doIn: function() {
-      $('.planejamento').addClass("fadeInDown");
-
-      $('.planejamento').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
-          $('.design').show().addClass('fadeInDown');
-      });        
-
-      $('.design').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
-          $('.mvp').show().addClass('fadeInDown');
+    if (w > 767) {
+      //
+      $('.section__quem-somos').onScreen({
+      container: window,
+      direction: 'vertical',
+      doIn: function() {
+        // Do something to the matched elements as they come in
+        $(this).addClass("fundo");
+      },
+      doOut: function() {
+        // Do something to the matched elements as they get off scren
+      },
+      tolerance: 500,
+      throttle: 50,
+      //toggleClass: 'onScreen',
       });
 
-      $('.mvp').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
-          $('.manutencao').show().addClass('fadeInDown');
+      //
+      $('.section__fazemos').onScreen({
+      container: window,
+      direction: 'vertical',
+      doIn: function() {
+        $('.negocios').addClass("fadeInLeft");
+
+        $('.negocios').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
+            $('.software').show().addClass('fadeInLeft');
+        });        
+
+        $('.software').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
+            $('.operacao').show().addClass('fadeInLeft');
+        });
+      },
+      doOut: function() {
+        // Do something to the matched elements as they get off scren
+      },
+      tolerance: 300,
+      throttle: 50,
+      }); 
+
+      //
+      $('.section__planejamos').onScreen({
+      container: window,
+      direction: 'vertical',
+      doIn: function() {
+        $('.planejamento').addClass("fadeInDown");
+
+        $('.planejamento').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
+            $('.design').show().addClass('fadeInDown');
+        });        
+
+        $('.design').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
+            $('.mvp').show().addClass('fadeInDown');
+        });
+
+        $('.mvp').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
+            $('.manutencao').show().addClass('fadeInDown');
+        });
+
+        $('.manutencao').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
+            $('.planejamos__observacao').show().addClass('fadeIn');
+        });      
+      },
+      doOut: function() {
+
+      },
+      tolerance: 200,
+      throttle: 50,
       });
 
-      $('.manutencao').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function () {
-          $('.planejamos__observacao').show().addClass('fadeIn');
-      });      
-    },
-    doOut: function() {
+      //
+      $('.section__projetos').onScreen({
+      container: window,
+      direction: 'vertical',
+      doIn: function() {
+        $('.projetos_slider .container').addClass("fadeInLeft").css('opacity', '1');
+      },
+      doOut: function() {
+      },
+      tolerance: 200,
+      throttle: 50,
+      }); 
 
-    },
-    tolerance: 200,
-    throttle: 50,
-    });
-
-    $('.section__projetos').onScreen({
-    container: window,
-    direction: 'vertical',
-    doIn: function() {
-      $('.projetos_slider .container').addClass("fadeInLeft").css('opacity', '1');
-    },
-    doOut: function() {
-    },
-    tolerance: 200,
-    throttle: 50,
-    }); 
-
-    $('.section__parceiros').onScreen({
-    container: window,
-    direction: 'vertical',
-    doIn: function() {
-      $('.parceiros__logos').addClass("fadeInDown").css('opacity', '0');
-    },
-    doOut: function() {
-    },
-    tolerance: 200,
-    throttle: 50,
-    });     
+      //
+      $('.section__parceiros').onScreen({
+      container: window,
+      direction: 'vertical',
+      doIn: function() {
+        $('.parceiros__logos').addClass("fadeInDown").css('opacity', '1');
+      },
+      doOut: function() {
+      },
+      tolerance: 200,
+      throttle: 50,
+      });     
+    } else {
+      //remove as animacoes de entrada para melhor visualizacao no celular
+      $('.section__quem-somos').addClass("fundo");
+      $('.software').show();
+      $('.operacao').show();
+      $('.design').show();
+      $('.mvp').show();
+      $('.manutencao').show();
+      $('.planejamos__observacao').show();
+      $('.projetos_slider .container').css('opacity', '1');
+      $('.parceiros__logos').css('opacity', '1');
+    }
 
     //navegar em numeros
     $('#capitalMovimentado').circliful({
